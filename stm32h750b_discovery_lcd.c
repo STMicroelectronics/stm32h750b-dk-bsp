@@ -1360,7 +1360,10 @@ static void LTDC_MspInit(LTDC_HandleTypeDef *hltdc)
     HAL_GPIO_Init(GPIOI, &gpio_init_structure);
 
     /* GPIOJ configuration */
-    gpio_init_structure.Pin       = GPIO_PIN_All;
+    gpio_init_structure.Pin       = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_3 | GPIO_PIN_4 | \
+                                    GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 | GPIO_PIN_8 | \
+                                    GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11 | GPIO_PIN_12 | \
+                                    GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15 ;
     gpio_init_structure.Alternate = GPIO_AF14_LTDC;
     HAL_GPIO_Init(GPIOJ, &gpio_init_structure);
     /* GPIOK configuration */
